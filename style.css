@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+:root {
+    --primary-color: #0ae930;
+}
+
+* {
+    font-family: 'Press Start 2P', cursive;
+    padding: 0;
+    margin: 0;
+    color: var(--primary-color);
+}
+
+@keyframes copiedAnimation {
+    0% {
+        opacity: 0;
+    }
+    
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+body {
+    background-color: #222;
+}
+
+.container {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 150px;
+}
+
+.container h1 {
+    font-size: 1.2rem;
+}
+
+.password-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px 0;
+}
+
+.password-content input,
+.password-content button {
+    font-size: 1.5rem;
+    border: none;
+    color: #222;
+}
+
+.password-content input {
+    padding: 10px 50px 10px 30px;
+}
+
+.password-content input {
+    width: 300px;
+    height: 40px;
+}
+
+.password-content button {
+    cursor: pointer;
+    width: 100px;
+    height: 40px;
+    margin-left: -50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--primary-color);
+}
+
+.password-content input:focus {
+    outline: none;
+}
+
+.check-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.check {
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+    display: inline-block;
+}
+
+.check label {
+    cursor: pointer;
+    position: relative;
+    padding-left: 1.5em;
+    display: inline-block;
+}
+
+.check input {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+.check label::before {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    height: 1em;
+    width: 1em;
+    margin-right: 0.5em;
+    border: 1px solid var(--primary-color);
+    transition: all 0.2s ease;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(0, -50%);
+  }
+
+  .check label::after {
+    content: ".";
+    position: absolute;
+    top: 7%;
+    left: 2%;
+    transform: translate(-50%, -50%);
+    font-size: 1.7em;
+    color: var(--primary-color);
+    opacity: 0;
+    transition: all .2s ease;
+  }
+
+  .check label img::after  {
+      width: 100%;
+      height: 100%;
+  }
+
+  .check label:focus::before, .checkbox label:hover::before {
+    background: #222;
+  }
+  .check input:checked + label::after {
+    opacity: 1;
+  }
+
+  .result {
+      max-width: 100%;
+      display: flex;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      margin-top: 50px;
+      font-size: 20px;
+      border-bottom: solid 1px var(--primary-color);
+    }   
+
+    .result button {
+      width: 100px;
+      height: 40px;
+      font-size: 15px;
+      margin: 0 0 10px 10px;
+       border: none;
+      cursor: pointer;
+      color: #222;
+      background-color: var(--primary-color);
+  }
+
+  .copied {
+      margin-top: 30px;
+      justify-content: center;
+      display: none;
+    }
+
+    @media (max-width: 950px) {
+        .container h1{
+            text-align: center;
+            font-size: 15px;
+        }
+
+        .container div,
+        .container div input,
+        .container div button {
+          font-size: 15px;
+        }
+    }
+
+    @media (max-width: 650px) {
+        .result {
+            width: 80%;
+            align-self: center;
+        }
+
+        .container div,
+        .container div input,
+        .container div button {
+          font-size: 10px;
+        }
+        
+        .password-content input {
+            width: 200px;
+            height: 30px;
+        }
+        
+        .password-content button {
+            width: 70px;
+            height: 40px;
+            margin-left: -35px;
+        }
+
+        .result button {
+            width: 70px;
+            height: 30px;
+        }
+    }
+
+    @media (max-width: 395px) {
+        .check-wrapper label {
+            font-size: 8px;
+        }
+    }
+
+    @media (max-width: 330px) {
+        .container div,
+        .container div input,
+        .container div button {
+          font-size: 6px;
+        }
+    }

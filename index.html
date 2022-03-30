@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Gerador de senha Forte</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Transforme sua senha simples em uma senha forte </h1>
+            <div class="password-content">
+                <input maxlength="30" type="text" id="password">
+                <button id="go">GO</button>
+            </div>
+            <div class="check-wrapper">
+                <div class="check">
+                    <input type="checkbox" id="chk0">
+                    <label for="chk0">
+                        Transformar algumas letras em números
+                    </label>
+                </div>
+                <div class="check">
+                    <input type="checkbox" id="chk1">
+                    <label for="chk1">
+                        Converter algumas letras em maiúsculas
+                    </label>
+                </div>
+                <div class="result">
+                    <span class="result-txt"></span>
+                    <button id="copy">COPIAR</button>
+                </div>
+                <div class="copied">
+                    <p>COPIADO!</p>
+                </div>
+            </div>
+    </div>
+</body>
+
+<script src="script.js"></script>
+</html>
